@@ -1,0 +1,515 @@
+CRITICAL - 2026-01-23 03:09:08 --> ErrorException: Undefined variable $keyword
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 4.
+ 1 APPPATH\Views\dashboard\index.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $keyword', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(21): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 03:31:12 --> ErrorException: Undefined variable $keyword
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 4.
+ 1 APPPATH\Views\dashboard\index.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $keyword', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(21): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 03:38:14 --> ErrorException: Undefined variable $keyword
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 4.
+ 1 APPPATH\Views\dashboard\index.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $keyword', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(21): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 03:38:40 --> Error: Undefined constant "keyword"
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 4.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 4 APPPATH\Controllers\DashboardController.php(21): view('dashboard/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:20:02 --> ErrorException: Undefined variable $keyword
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 4.
+ 1 APPPATH\Views\dashboard\index.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $keyword', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(36): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+ERROR - 2026-01-23 05:41:59 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\htdocs\ukk\vendor\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\htdocs\ukk\app\Controllers\DashboardController.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+#9 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#10 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\htdocs\ukk\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\htdocs\ukk\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\htdocs\\ukk\\p...')
+#15 {main}
+CRITICAL - 2026-01-23 05:41:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: dashboard/alat/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:41:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'XR\', \'1\', \'XR\', \'1\', \'2026-01-23 05:41:59\', \'2026-01-23 05:41:59\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'XR\', \'1\', \'XR\', \'1\', \'2026-01-23 05:41:59\', \'2026-01-23 05:41:59\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:41:59 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'XR\', \'1\', \'XR\', \'1\', \'2026-01-23 05:41:59\', \'2026-01-23 05:41:59\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'XR\', \'1\', \'XR\', \'1\', \'2026-01-23 05:41:59\', \'2026-01-23 05:41:59\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'XR\', \'1\', \'XR\', \'1\', \'2026-01-23 05:41:59\', \'2026-01-23 05:41:59\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+ERROR - 2026-01-23 05:43:13 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\htdocs\ukk\vendor\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\htdocs\ukk\app\Controllers\DashboardController.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+#9 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#10 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\htdocs\ukk\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\htdocs\ukk\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\htdocs\\ukk\\p...')
+#15 {main}
+CRITICAL - 2026-01-23 05:43:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: dashboard/alat/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:43:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'1\', \'A16 4G\', \'1\', \'2026-01-23 05:43:13\', \'2026-01-23 05:43:13\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'1\', \'A16 4G\', \'1\', \'2026-01-23 05:43:13\', \'2026-01-23 05:43:13\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:43:13 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'1\', \'A16 4G\', \'1\', \'2026-01-23 05:43:13\', \'2026-01-23 05:43:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'1\', \'A16 4G\', \'1\', \'2026-01-23 05:43:13\', \'2026-01-23 05:43:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'1\', \'A16 4G\', \'1\', \'2026-01-23 05:43:13\', \'2026-01-23 05:43:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+ERROR - 2026-01-23 05:51:24 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\htdocs\ukk\vendor\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\htdocs\ukk\app\Controllers\DashboardController.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+#9 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#10 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\htdocs\ukk\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\htdocs\ukk\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\htdocs\\ukk\\p...')
+#15 {main}
+CRITICAL - 2026-01-23 05:51:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: dashboard/alat/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:51:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'2\', \'A16 4G\', \'1\', \'2026-01-23 05:51:24\', \'2026-01-23 05:51:24\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'2\', \'A16 4G\', \'1\', \'2026-01-23 05:51:24\', \'2026-01-23 05:51:24\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:51:24 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'2\', \'A16 4G\', \'1\', \'2026-01-23 05:51:24\', \'2026-01-23 05:51:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'2\', \'A16 4G\', \'1\', \'2026-01-23 05:51:24\', \'2026-01-23 05:51:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (\'2\', \'Samsung Galaxy\', \'2\', \'A16 4G\', \'1\', \'2026-01-23 05:51:24\', \'2026-01-23 05:51:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `alat` (`id_category`, `merk`, `kondisi`, `tipe`, `status`, `created_at`, `updated_at`) VALUES (:id_category:, :merk:, :kondisi:, :tipe:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\DashboardController.php(51): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+DEBUG - 2026-01-23 05:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-23 05:52:47 --> ErrorException: Undefined array key "id_alat"
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 37.
+ 1 APPPATH\Views\dashboard\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_alat"', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(36): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+DEBUG - 2026-01-23 05:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-23 05:53:04 --> ErrorException: Undefined array key "id_alat"
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 37.
+ 1 APPPATH\Views\dashboard\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_alat"', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(36): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:53:32 --> ErrorException: Undefined array key "id_alat"
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 38.
+ 1 APPPATH\Views\dashboard\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_alat"', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(36): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:54:17 --> ErrorException: Undefined array key "id_alat"
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 37.
+ 1 APPPATH\Views\dashboard\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_alat"', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(36): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 05:54:36 --> ErrorException: Undefined array key "id_alat"
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard\index.php on line 37.
+ 1 APPPATH\Views\dashboard\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_alat"', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(36): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+DEBUG - 2026-01-23 05:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-23 05:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-23 06:07:35 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\AlatModel::dlete
+[Method: GET, Route: dashboard/alat/delete/10]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\DashboardController.php(91): CodeIgniter\Model->__call('dlete', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->delete('10')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+ERROR - 2026-01-23 06:08:04 --> mysqli_sql_exception: Unknown column 'id_alat' in 'where clause' in C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `al...', 0)
+#1 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `al...')
+#2 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `al...')
+#3 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `al...', Array, false)
+#4 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\htdocs\ukk\vendor\codeigniter4\framework\system\BaseModel.php(1123): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\htdocs\ukk\app\Controllers\DashboardController.php(91): CodeIgniter\BaseModel->delete(Array)
+#7 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\DashboardController->delete('10')
+#8 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#9 C:\htdocs\ukk\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\htdocs\ukk\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\htdocs\ukk\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\htdocs\ukk\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\htdocs\\ukk\\p...')
+#14 {main}
+CRITICAL - 2026-01-23 06:08:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_alat' in 'where clause'
+[Method: GET, Route: dashboard/alat/delete/10]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `alat`
+WHERE `id_alat` IN :id_alat:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1123): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\DashboardController.php(91): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->delete('10')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 06:08:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_alat' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `alat`
+WHERE `id_alat` IN (\'10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `alat`
+WHERE `id_alat` IN (\'10\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `alat`
+WHERE `id_alat` IN :id_alat:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1123): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\DashboardController.php(91): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->delete('10')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 06:08:04 --> [Caused by] mysqli_sql_exception: Unknown column 'id_alat' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `alat`
+WHERE `id_alat` IN (\'10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `alat`
+WHERE `id_alat` IN (\'10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `alat`
+WHERE `id_alat` IN (\'10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `alat`
+WHERE `id_alat` IN :id_alat:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1123): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\DashboardController.php(91): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->delete('10')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+DEBUG - 2026-01-23 06:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-23 06:10:48 --> ErrorException: Undefined variable $alatModel
+[Method: GET, Route: dashboard/alat/edit/11]
+in APPPATH\Controllers\DashboardController.php on line 69.
+ 1 APPPATH\Controllers\DashboardController.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alatModel', 'C:\\htdocs\\ukk\\app\\Controllers\\DashboardController.php', 69)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->edit('11')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 06:15:11 --> ErrorException: Undefined variable $alatModel
+[Method: GET, Route: dashboard/alat/edit/11]
+in APPPATH\Controllers\DashboardController.php on line 69.
+ 1 APPPATH\Controllers\DashboardController.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alatModel', 'C:\\htdocs\\ukk\\app\\Controllers\\DashboardController.php', 69)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->edit('11')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 06:16:08 --> ErrorException: Undefined array key "nama_alat"
+[Method: GET, Route: dashboard/alat/edit/11]
+in APPPATH\Views\dashboard\alat\edit.php on line 4.
+ 1 APPPATH\Views\dashboard\alat\edit.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_alat"', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\alat\\edit.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\alat\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/alat/edit', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(68): view('dashboard/alat/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->edit('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 06:16:54 --> ErrorException: Undefined array key "merk_alat"
+[Method: GET, Route: dashboard/alat/edit/11]
+in APPPATH\Views\dashboard\alat\edit.php on line 15.
+ 1 APPPATH\Views\dashboard\alat\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "merk_alat"', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\alat\\edit.php', 15)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\alat\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/alat/edit', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(68): view('dashboard/alat/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->edit('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 06:21:38 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard/alat/edit/11]
+in APPPATH\Views\dashboard\alat\edit.php on line 1.
+ 1 APPPATH\Views\dashboard\alat\edit.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\alat\\edit.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\alat\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/alat/edit', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(68): view('dashboard/alat/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->edit('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
+CRITICAL - 2026-01-23 06:21:59 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard/alat/edit/11]
+in APPPATH\Views\dashboard\alat\edit.php on line 1.
+ 1 APPPATH\Views\dashboard\alat\edit.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\htdocs\\ukk\\app\\Views\\dashboard\\alat\\edit.php', 1)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\htdocs\\ukk\\app\\Views\\dashboard\\alat\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/alat/edit', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(68): view('dashboard/alat/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->edit('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\htdocs\\ukk\\public\\index.php')
