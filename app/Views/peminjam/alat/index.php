@@ -61,10 +61,14 @@
                     </div>
                     
                     <!-- Action Button -->
-                    <?php if ($item['status'] == 'Tersedia'): ?>
+                    <?php if ($item['status'] == 'Tersedia' && $item['kondisi'] != 'Rusak Berat' && $item['kondisi'] != 'rusak berat'): ?>
                         <a href="<?= base_url('/peminjam/peminjaman/create/' . $item['id_hp']) ?>" class="btn btn-primary btn-block mt-3">
                             <i class="fas fa-handshake"></i> Ajukan Peminjaman
                         </a>
+                    <?php elseif ($item['kondisi'] == 'Rusak Berat' || $item['kondisi'] == 'rusak berat'): ?>
+                        <button class="btn btn-danger btn-block mt-3" disabled>
+                            <i class="fas fa-tools"></i> Sedang Diperbaiki
+                        </button>
                     <?php else: ?>
                         <button class="btn btn-secondary btn-block mt-3" disabled>
                             <i class="fas fa-ban"></i> Tidak Tersedia

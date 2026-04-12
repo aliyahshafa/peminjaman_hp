@@ -36,10 +36,13 @@
                             <?php endif; ?>
                         </select>
                     </div>
-                    <div class="form-group" style="display: flex; align-items: flex-end;">
+                    <div class="form-group" style="display: flex; align-items: flex-end; gap: 8px;">
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-search"></i> Cari
                         </button>
+                        <a href="<?= base_url('/admin/alat') ?>" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Reset
+                        </a>
                     </div>
                 </div>
             </form>
@@ -68,7 +71,7 @@
                             <td><strong><?= esc($item['merk']) ?></strong></td>
                             <td><?= esc($item['tipe']) ?></td>
                             <td><?= esc($item['nama_category'] ?? '-') ?></td>
-                            <td><strong class="text-success">Rp <?= number_format($p['harga'] ?? 0, 0, ',', '.') ?></strong></td>
+                            <td><strong class="text-success">Rp <?= number_format($item['harga'] ?? 0, 0, ',', '.') ?></strong></td>
                             <td>
                                 <?php if ($item['kondisi'] == 'Baik'): ?>
                                     <span class="badge badge-success">Baik</span>
@@ -89,9 +92,11 @@
                                 <a href="<?= base_url('/admin/alat/edit/' . $item['id_hp']) ?>" class="btn btn-warning btn-sm" title="Edit">
                                     <i class="fas fa-edit"></i> 
                                 </a>
+                                <?php if ($item['status'] != 'Dipinjam' && $item['status'] != 'dipinjam'): ?>
                                 <a href="<?= base_url('/admin/alat/delete/' . $item['id_hp']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus HP ini?')" title="Hapus">
                                     <i class="fas fa-trash"></i> 
                                 </a>
+                                <?php endif; ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

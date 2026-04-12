@@ -65,16 +65,69 @@ class AdminPeminjamController extends BaseController
     public function pengembalian()
     {
         $peminjamanModel = new \App\Models\PeminjamanModel();
+        $alatModel = new \App\Models\AlatModel();
 
-        // Ambil data pengembalian yang menunggu verifikasi dan yang sudah dikembalikan
+        // Ambil data pengembalian yang menunggu verifikasi saja
         $data['pengembalian'] = $peminjamanModel
-            ->select('peminjaman.*, alat.merk, alat.tipe')
+            ->select('peminjaman.*, alat.merk, alat.tipe, alat.harga')
             ->join('alat', 'alat.id_hp = peminjaman.id_hp')
-            ->whereIn('peminjaman.status', ['Menunggu Pengembalian', 'Menunggu_Pengembalian', 'Dikembalikan'])
+            ->whereIn('peminjaman.status', ['Menunggu Pengembalian', 'Menunggu_Pengembalian'])
+            ->orderBy('peminjaman.id_peminjaman', 'DESC')
+            ->findAll();
+
+        // Ambil history pengembalian yang sudah selesai (Dikembalikan)
+        $data['historyPengembalian'] = $peminjamanModel
+            ->select('peminjaman.*, alat.merk, alat.tipe, alat.harga')
+            ->join('alat', 'alat.id_hp = peminjaman.id_hp')
+            ->where('peminjaman.status', 'Dikembalikan')
+            ->orderBy('peminjaman.id_peminjaman', 'DESC')
+            ->findAll();
+
+        // Ambil peminjaman yang statusnya Disetujui untuk form tambah pengembalian
+        $data['peminjamanAktif'] = $peminjamanModel
+            ->select('peminjaman.*, alat.merk, alat.tipe, alat.harga')
+            ->join('alat', 'alat.id_hp = peminjaman.id_hp')
+            ->whereIn('peminjaman.status', ['Disetujui', 'Dipinjam'])
             ->orderBy('peminjaman.id_peminjaman', 'DESC')
             ->findAll();
 
         return view('admin/pengembalian/index', $data);
+    }
+
+    public function tambahPengembalian()
+    {
+        $peminjamanModel = new \App\Models\PeminjamanModel();
+        $alatModel       = new \App\Models\AlatModel();
+
+        $id_peminjaman = $this->request->getPost('id_peminjaman');
+        $kondisi_hp    = $this->request->getPost('kondisi_hp');
+
+        // Hitung denda berdasarkan kondisi
+        if ($kondisi_hp == 'baik') {
+            $denda = 0;
+        } elseif ($kondisi_hp == 'rusak ringan') {
+            $denda = 10000;
+        } else {
+            $denda = 20000;
+        }
+
+        $peminjaman = $peminjamanModel->find($id_peminjaman);
+
+        if (!$peminjaman) {
+            return redirect()->back()->with('error', 'Data peminjaman tidak ditemukan');
+        }
+
+        // Update status peminjaman menjadi Menunggu Pengembalian
+        $peminjamanModel->update($id_peminjaman, [
+            'status'         => 'Menunggu Pengembalian',
+            'kondisi_hp'     => $kondisi_hp,
+            'denda'          => $denda,
+            'tanggal_kembali'=> date('Y-m-d'),
+        ]);
+
+        logAktivitas('Admin menambahkan pengembalian HP');
+
+        return redirect()->back()->with('success', 'Pengembalian berhasil ditambahkan');
     }
 
     public function setujuiPengembalian($id)

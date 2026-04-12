@@ -254,10 +254,12 @@ echo $this->section('content');
                                 <a href="<?= base_url('/admin/alat/edit/' . $alat['id_hp']) ?>" class="btn btn-warning btn-sm" title="Edit">
                                     <i class="fas fa-edit"></i>
                                 </a>
+                                <?php if ($alat['status'] != 'Dipinjam' && $alat['status'] != 'dipinjam'): ?>
                                 <!-- Tombol hapus HP dengan konfirmasi JavaScript -->
                                 <a href="<?= base_url('/admin/alat/delete/' . $alat['id_hp']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus HP ini?')" title="Hapus">
                                     <i class="fas fa-trash"></i>
                                 </a>
+                                <?php endif; ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -315,7 +317,7 @@ echo $this->section('content');
                         ?>
                         <tr>
                             <!-- Tampilkan tanggal peminjaman dengan format dd/mm/yyyy -->
-                            <td><?= date('d/m/Y', strtotime($p['waktu'])) ?></td>
+                            <td><?= ($ts = strtotime($p['waktu'])) && $ts > 0 ? date('d/m/Y', $ts) : date('d/m/Y') ?></td>
                             <!-- Tampilkan nama peminjam dengan escape untuk keamanan -->
                             <td><?= esc($p['nama_user']) ?></td>
                             <!-- Tampilkan merk dan tipe HP dengan escape untuk keamanan -->
@@ -404,6 +406,57 @@ echo $this->section('content');
             <a href="<?= base_url('/admin/log') ?>" class="btn btn-secondary">
                 <i class="fas fa-history"></i> Log Aktivitas
             </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card history peminjaman selesai/ditolak -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title"><i class="fas fa-history"></i> History Peminjaman</h3>
+        <a href="<?= base_url('/admin/peminjaman') ?>" class="btn btn-primary btn-sm">
+            Kelola Peminjaman
+        </a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Peminjam</th>
+                        <th>HP</th>
+                        <th>Tanggal Kembali</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (isset($historyPeminjaman) && count($historyPeminjaman) > 0): ?>
+                        <?php foreach ($historyPeminjaman as $h): ?>
+                        <tr>
+                            <td><?= ($ts = strtotime($h['waktu'])) && $ts > 0 ? date('d/m/Y', $ts) : date('d/m/Y') ?></td>
+                            <td><?= esc($h['nama_user']) ?></td>
+                            <td><?= esc($h['merk']) ?> <?= esc($h['tipe']) ?></td>
+                            <td><?= $h['tanggal_kembali'] ? date('d/m/Y', strtotime($h['tanggal_kembali'])) : '-' ?></td>
+                            <td>
+                                <?php if ($h['status'] == 'Dikembalikan'): ?>
+                                    <span class="badge badge-success">Dikembalikan</span>
+                                <?php elseif ($h['status'] == 'Ditolak'): ?>
+                                    <span class="badge badge-danger">Ditolak</span>
+                                <?php else: ?>
+                                    <span class="badge badge-secondary"><?= esc($h['status']) ?></span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="5" class="text-center">Belum ada history peminjaman</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

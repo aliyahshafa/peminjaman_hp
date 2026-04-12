@@ -141,6 +141,27 @@ $routes->group('admin', ['filter' => 'role:Admin'], function ($routes) {
     // GET /admin/peminjaman/delete/{id} -> PeminjamanController::delete
     $routes->get('peminjaman/delete/(:num)', 'PeminjamanController::delete/$1');
 
+    // Admin meminjam HP langsung
+    // POST /admin/peminjaman/pinjam -> PeminjamanController::adminPinjam
+    $routes->post('peminjaman/pinjam', 'PeminjamanController::adminPinjam');
+
+    // ==================
+    // MANAJEMEN KATEGORI
+    // ==================
+
+    // Daftar kategori
+    $routes->get('category', 'CategoryController::index');
+    // Form tambah kategori
+    $routes->get('category/create', 'CategoryController::create');
+    // Simpan kategori baru
+    $routes->post('category/store', 'CategoryController::store');
+    // Form edit kategori
+    $routes->get('category/edit/(:num)', 'CategoryController::edit/$1');
+    // Update kategori
+    $routes->post('category/update/(:num)', 'CategoryController::update/$1');
+    // Hapus kategori
+    $routes->get('category/delete/(:num)', 'CategoryController::delete/$1');
+
     // ==================
     // PENGEMBALIAN (ADMIN)
     // ==================
@@ -153,6 +174,10 @@ $routes->group('admin', ['filter' => 'role:Admin'], function ($routes) {
     // GET /admin/pengembalian/setujui/{id} -> AdminPeminjamController::setujuiPengembalian
     $routes->get('pengembalian/setujui/(:num)','AdminPeminjamController::setujuiPengembalian/$1');
 
+    // Tambah pengembalian oleh admin
+    // POST /admin/pengembalian/tambah -> AdminPeminjamController::tambahPengembalian
+    $routes->post('pengembalian/tambah', 'AdminPeminjamController::tambahPengembalian');
+
     // ==================
     // LOG AKTIVITAS
     // ==================
@@ -160,6 +185,10 @@ $routes->group('admin', ['filter' => 'role:Admin'], function ($routes) {
     // Daftar log aktivitas
     // GET /admin/log -> LogController::index
     $routes->get('log', 'LogController::index');
+
+    // Detail log aktivitas
+    // GET /admin/log/detail/{id} -> LogController::detail
+    $routes->get('log/detail/(:num)', 'LogController::detail/$1');
 });
 
 
@@ -193,6 +222,10 @@ $routes->group('petugas', ['filter' => 'role:Petugas'], function ($routes) {
     // POST /petugas/peminjaman/update/{id} -> PetugasPeminjamanController::update
     $routes->post('peminjaman/update/(:num)', 'PetugasPeminjamanController::update/$1');
     
+    // Tolak peminjaman
+    // POST /petugas/peminjaman/tolak/{id} -> PetugasPeminjamanController::tolak
+    $routes->post('peminjaman/tolak/(:num)', 'PetugasPeminjamanController::tolak/$1');
+    
     // Update peminjaman (route alternatif)
     // POST /petugas/petugas/peminjaman/update{id} -> PetugasPeminjamanController::update
     $routes->post('petugas/peminjaman/update(:num)', 'PetugasPeminjamanController::update/$1');
@@ -216,6 +249,10 @@ $routes->group('petugas', ['filter' => 'role:Petugas'], function ($routes) {
     // Halaman laporan
     // GET /petugas/laporan -> PetugasLaporanController::index
     $routes->get('laporan', 'PetugasLaporanController::index');
+
+    // Cetak laporan
+    // GET /petugas/laporan/cetak -> PetugasLaporanController::cetak
+    $routes->get('laporan/cetak', 'PetugasLaporanController::cetak');
 });
 
 // ==================

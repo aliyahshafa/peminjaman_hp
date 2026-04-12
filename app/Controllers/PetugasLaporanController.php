@@ -17,17 +17,64 @@ class PetugasLaporanController extends BaseController
 
     public function index()
     {
-        // Mengambil seluruh data peminjaman
-        $data['peminjaman'] = $this->peminjamanModel->findAll();
+        $dateFrom = $this->request->getGet('date_from');
+        $dateTo   = $this->request->getGet('date_to');
+        $status   = $this->request->getGet('status');
 
-        // Menampilkan halaman laporan
+        $db = \Config\Database::connect();
+        $builder = $db->table('peminjaman')
+            ->select('peminjaman.*, alat.merk, alat.tipe')
+            ->join('alat', 'alat.id_hp = peminjaman.id_hp', 'left')
+            ->orderBy('peminjaman.id_peminjaman', 'DESC');
+
+        if ($dateFrom) {
+            $builder->where('DATE(peminjaman.waktu) >=', $dateFrom);
+        }
+        if ($dateTo) {
+            $builder->where('DATE(peminjaman.waktu) <=', $dateTo);
+        }
+        if ($status) {
+            $builder->where('peminjaman.status', $status);
+        }
+
+        $data['peminjaman'] = $builder->get()->getResultArray();
+        $data['date_from']  = $dateFrom;
+        $data['date_to']    = $dateTo;
+        $data['status']     = $status;
+
         return view('petugas/laporan/index', $data);
     }
 
     public function cetak()
     {
-        // Data yang sama, tapi tampilan khusus cetak
-        $data['peminjaman'] = $this->peminjamanModel->findAll();
+        $dateFrom = $this->request->getGet('date_from');
+        $dateTo   = $this->request->getGet('date_to');
+        $status   = $this->request->getGet('status');
+        $id       = $this->request->getGet('id');
+
+        $db = \Config\Database::connect();
+        $builder = $db->table('peminjaman')
+            ->select('peminjaman.*, alat.merk, alat.tipe')
+            ->join('alat', 'alat.id_hp = peminjaman.id_hp', 'left')
+            ->orderBy('peminjaman.id_peminjaman', 'DESC');
+
+        if ($id) {
+            $builder->where('peminjaman.id_peminjaman', $id);
+        } else {
+            if ($dateFrom) {
+                $builder->where('DATE(peminjaman.waktu) >=', $dateFrom);
+            }
+            if ($dateTo) {
+                $builder->where('DATE(peminjaman.waktu) <=', $dateTo);
+            }
+            if ($status) {
+                $builder->where('peminjaman.status', $status);
+            }
+        }
+
+        $data['peminjaman'] = $builder->get()->getResultArray();
+        $data['date_from']  = $dateFrom;
+        $data['date_to']    = $dateTo;
 
         return view('petugas/laporan/cetak', $data);
     }

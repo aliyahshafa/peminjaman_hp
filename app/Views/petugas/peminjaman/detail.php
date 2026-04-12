@@ -122,7 +122,7 @@
                     </tr>
                     <tr>
                         <td><strong>Tanggal Pinjam</strong></td>
-                        <td>: <?= date('d/m/Y H:i', strtotime($peminjaman['waktu'])) ?></td>
+                        <td>: <?= ($ts = strtotime($peminjaman['waktu'])) && $ts > 0 ? date('d/m/Y H:i', $ts) : date('d/m/Y H:i') ?></td>
                     </tr>
                     <tr>
                         <td><strong>Tanggal Kembali</strong></td>
@@ -133,8 +133,9 @@
                         <td>: 
                             <?php 
                             if (isset($peminjaman['tanggal_kembali']) && $peminjaman['tanggal_kembali']) {
-                                $tanggalPinjam = new DateTime($peminjaman['waktu']);
-                                $tanggalKembali = new DateTime($peminjaman['tanggal_kembali']);
+                                $tsP = strtotime($peminjaman['waktu']);
+                                $tanggalPinjam = new DateTime(($tsP && $tsP > 0) ? date('Y-m-d', $tsP) : date('Y-m-d'));
+                                $tanggalKembali = new DateTime(date('Y-m-d', strtotime($peminjaman['tanggal_kembali'])));
                                 $durasi = $tanggalPinjam->diff($tanggalKembali)->days;
                                 $durasi = max(1, min(3, $durasi));
                                 echo $durasi . ' hari';

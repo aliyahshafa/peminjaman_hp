@@ -32,23 +32,24 @@
             <div class="form-row">
                 <div class="form-group">
                     <label class="form-label required">Tanggal Pinjam</label>
-                    <input type="date" name="tanggal_pinjam" class="form-control" value="<?= date('Y-m-d') ?>" required>
+                    <input type="date" name="tanggal_pinjam" id="tanggal_pinjam" class="form-control" value="<?= date('Y-m-d') ?>" required readonly>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label required">Tanggal Pengembalian</label>
-                    <input type="date" name="tanggal_kembali" class="form-control" min="<?= date('Y-m-d') ?>" required>
+                    <label class="form-label required">Durasi Peminjaman</label>
+                    <select name="waktu" id="durasi" class="form-control" required>
+                        <option value="">Pilih Durasi</option>
+                        <option value="1">1 Hari</option>
+                        <option value="2">2 Hari</option>
+                        <option value="3">3 Hari</option>
+                    </select>
                 </div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label required">Durasi Peminjaman</label>
-                <select name="waktu" class="form-control" required>
-                    <option value="">Pilih Durasi</option>
-                    <option value="1">1 Hari</option>
-                    <option value="2">2 Hari</option>
-                    <option value="3">3 Hari</option>
-                </select>
+
+                <div class="form-group">
+                    <label class="form-label">Tanggal Pengembalian</label>
+                    <input type="text" id="tanggal_kembali_display" class="form-control" placeholder="Otomatis sesuai durasi" readonly>
+                    <input type="hidden" name="tanggal_kembali" id="tanggal_kembali">
+                </div>
             </div>
             
             <div class="form-group">
@@ -67,5 +68,29 @@
         </form>
     </div>
 </div>
+
+<script>
+document.getElementById('durasi').addEventListener('change', function () {
+    var durasi = parseInt(this.value);
+    var tanggalPinjam = document.getElementById('tanggal_pinjam').value;
+
+    if (durasi && tanggalPinjam) {
+        var tgl = new Date(tanggalPinjam);
+        tgl.setDate(tgl.getDate() + durasi);
+
+        var yyyy = tgl.getFullYear();
+        var mm   = String(tgl.getMonth() + 1).padStart(2, '0');
+        var dd   = String(tgl.getDate()).padStart(2, '0');
+        var formatted = yyyy + '-' + mm + '-' + dd;
+        var display = dd + '/' + mm + '/' + yyyy;
+
+        document.getElementById('tanggal_kembali').value         = formatted;
+        document.getElementById('tanggal_kembali_display').value = display;
+    } else {
+        document.getElementById('tanggal_kembali').value         = '';
+        document.getElementById('tanggal_kembali_display').value = '';
+    }
+});
+</script>
 
 <?= $this->endSection() ?>

@@ -134,6 +134,34 @@ class PetugasPeminjamanController extends BaseController
     }
 
     /**
+     * Method untuk menolak peminjaman
+     * Mengubah status peminjaman menjadi Ditolak dan HP kembali Tersedia
+     * 
+     * @param int $id ID peminjaman yang akan ditolak
+     */
+    public function tolak($id)
+    {
+        // Ambil data peminjaman untuk mendapatkan id_hp
+        $peminjaman = $this->peminjamanModel->find($id);
+
+        if ($peminjaman) {
+            // Update status peminjaman menjadi Ditolak
+            $this->peminjamanModel->update($id, [
+                'status' => 'Ditolak'
+            ]);
+
+            // Kembalikan status HP menjadi Tersedia
+            $this->alatModel->update($peminjaman['id_hp'], [
+                'status' => 'Tersedia'
+            ]);
+
+            logAktivitas('Petugas menolak peminjaman ID: ' . $id);
+        }
+
+        return redirect()->to('/petugas/peminjaman')->with('success', 'Peminjaman berhasil ditolak');
+    }
+
+    /**
      * Method untuk memproses update data peminjaman
      * Hanya bisa diakses oleh Petugas
      * 

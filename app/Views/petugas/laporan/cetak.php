@@ -18,7 +18,7 @@
     <div class="header">
         <h1>LAPORAN PEMINJAMAN ALAT</h1>
         <p>Sistem Peminjaman Alat Laboratorium</p>
-        <?php if (isset($date_from) && isset($date_to)): ?>
+        <?php if (isset($date_from) && $date_from && isset($date_to) && $date_to): ?>
         <p>Periode: <?= date('d/m/Y', strtotime($date_from)) ?> - <?= date('d/m/Y', strtotime($date_to)) ?></p>
         <?php endif; ?>
         <p>Dicetak pada: <?= date('d/m/Y H:i:s') ?></p>
@@ -40,10 +40,15 @@
                 <?php $no = 1; foreach ($peminjaman as $p): ?>
                 <tr>
                     <td><?= $no++ ?></td>
-                    <td><?= date('d/m/Y', strtotime($p['tanggal_pinjam'])) ?></td>
-                    <td><?= esc($p['nama_peminjam'] ?? $p['nama_user'] ?? 'N/A') ?></td>
-                    <td><?= esc($p['nama_alat'] ?? 'N/A') ?></td>
-                    <td><?= date('d/m/Y', strtotime($p['tanggal_kembali'])) ?></td>
+                    <td>
+                        <?php
+                        $tsW = strtotime($p['waktu'] ?? '');
+                        echo ($tsW && $tsW > 86400) ? date('d/m/Y', $tsW) : date('d/m/Y');
+                        ?>
+                    </td>
+                    <td><?= esc($p['nama_user'] ?? 'N/A') ?></td>
+                    <td><?= isset($p['merk']) ? esc($p['merk'] . ' ' . $p['tipe']) : 'N/A' ?></td>
+                    <td><?= $p['tanggal_kembali'] ? date('d/m/Y', strtotime($p['tanggal_kembali'])) : '-' ?></td>
                     <td><?= esc($p['status']) ?></td>
                 </tr>
                 <?php endforeach; ?>

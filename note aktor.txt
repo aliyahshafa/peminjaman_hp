@@ -1,0 +1,9 @@
+username:
+- admin@gmail.com
+- petugas@gmail.com
+- peminjam@gmail.com
+
+password:
+- admin = 11admin
+- petugas = 22petugas
+- peminjam = 33peminjam

@@ -24,10 +24,13 @@
                             <option value="Disetujui" <?= ($status ?? '') == 'Disetujui' ? 'selected' : '' ?>>Disetujui</option>
                         </select>
                     </div>
-                    <div class="form-group" style="display: flex; align-items: flex-end;">
+                    <div class="form-group" style="display: flex; align-items: flex-end; gap: 8px;">
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-filter"></i> Filter
                         </button>
+                        <a href="<?= base_url('/petugas/peminjaman') ?>" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Reset
+                        </a>
                     </div>
                 </div>
             </form>
@@ -53,7 +56,7 @@
                         <?php $no = 1; foreach ($peminjaman as $p): ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= date('d/m/Y', strtotime($p['waktu'])) ?></td>
+                            <td><?= ($ts = strtotime($p['waktu'])) && $ts > 0 ? date('d/m/Y', $ts) : date('d/m/Y') ?></td>
                             <td><?= esc($p['nama_user']) ?></td>
                             <td><?= esc($p['merk']) ?> <?= esc($p['tipe']) ?></td>
                             <td><strong class="text-success">Rp <?= number_format($p['harga'] ?? 0, 0, ',', '.') ?></strong></td>
@@ -76,6 +79,12 @@
                                                 <input type="hidden" name="status" value="Disetujui">
                                                 <button type="submit" class="btn btn-success btn-sm">
                                                     <i class="fas fa-check"></i> Setujui
+                                                </button>
+                                            </form>
+                                            <form method="post" action="<?= base_url('/petugas/peminjaman/tolak/' . $p['id_peminjaman']) ?>" style="display: inline; margin: 0;">
+                                                <?= csrf_field() ?>
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menolak peminjaman ini?')">
+                                                    <i class="fas fa-times"></i> Tolak
                                                 </button>
                                             </form>
                                             <a href="<?= base_url('/petugas/peminjaman/detail/' . $p['id_peminjaman']) ?>" class="btn btn-info btn-sm" title="Lihat Detail">

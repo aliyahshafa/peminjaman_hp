@@ -70,15 +70,15 @@ class PeminjamanModel extends Model
     {
         // Query dengan JOIN ke tabel user dan alat
         return $this->select('
-                peminjaman.id_peminjaman,    // ID peminjaman
-                peminjaman.nama_user,         // Nama user
-                peminjaman.waktu,             // Waktu peminjaman
-                peminjaman.status AS status_peminjaman, // Status peminjaman
-                peminjaman.id_user,           // ID user
-                peminjaman.id_hp,             // ID HP
-                alat.merk,                    // Merk HP
-                alat.tipe,                    // Tipe HP
-                alat.harga                    // Harga sewa HP
+                peminjaman.id_peminjaman,
+                peminjaman.nama_user,
+                peminjaman.waktu,
+                peminjaman.status AS status_peminjaman,
+                peminjaman.id_user,
+                peminjaman.id_hp,
+                alat.merk,
+                alat.tipe,
+                alat.harga
             ')
             ->join('user', 'user.id_user = peminjaman.id_user', 'left') // LEFT JOIN dengan tabel user
             ->join('alat', 'alat.id_hp = peminjaman.id_hp', 'left') // LEFT JOIN dengan tabel alat
@@ -133,13 +133,13 @@ class PeminjamanModel extends Model
         // Query langsung dengan database builder
         return $this->db->table('peminjaman')
             ->select('
-                peminjaman.id_peminjaman,  // ID peminjaman
-                peminjaman.nama_user,       // Nama user
-                peminjaman.waktu,           // Waktu peminjaman
-                peminjaman.status,          // Status peminjaman
-                alat.merk,                  // Merk HP
-                alat.tipe,                  // Tipe HP
-                alat.harga                  // Harga sewa HP
+                peminjaman.id_peminjaman,
+                peminjaman.nama_user,
+                peminjaman.waktu,
+                peminjaman.status,
+                alat.merk,
+                alat.tipe,
+                alat.harga
             ')
             ->join('alat', 'alat.id_hp = peminjaman.id_hp') // JOIN dengan tabel alat
             ->whereIn('peminjaman.status', ['Diajukan', 'Disetujui']) // Filter status yang perlu diverifikasi
@@ -158,13 +158,13 @@ class PeminjamanModel extends Model
         // Query langsung dengan database builder
         return $this->db->table('peminjaman')
             ->select('
-                peminjaman.id_peminjaman,  // ID peminjaman
-                peminjaman.nama_user,       // Nama user
-                peminjaman.waktu,           // Waktu peminjaman
-                peminjaman.status,          // Status peminjaman
-                alat.merk,                  // Merk HP
-                alat.tipe,                  // Tipe HP
-                alat.harga                  // Harga sewa HP
+                peminjaman.id_peminjaman,
+                peminjaman.nama_user,
+                peminjaman.waktu,
+                peminjaman.status,
+                alat.merk,
+                alat.tipe,
+                alat.harga
             ')
             ->join('alat', 'alat.id_hp = peminjaman.id_hp') // JOIN dengan tabel alat
             ->whereIn('peminjaman.status', ['Diajukan', 'Disetujui']) // Filter status yang perlu diverifikasi

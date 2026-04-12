@@ -17,9 +17,11 @@
     <div class="card-body">
         <!-- Search Box -->
         <div class="search-box">
-            <form method="get" action="<?= base_url('/admin/user') ?>">
+            <form method="get" action="<?= base_url('/admin/user') ?>" style="display:flex; gap:8px; align-items:center;">
                 <i class="fas fa-search"></i>
                 <input type="text" name="keyword" class="form-control" placeholder="Cari nama atau email..." value="<?= $keyword ?? '' ?>">
+                <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-search"></i> Cari</button>
+                <a href="<?= base_url('/admin/user') ?>" class="btn btn-secondary btn-sm"><i class="fas fa-times"></i> Reset</a>
             </form>
         </div>
         

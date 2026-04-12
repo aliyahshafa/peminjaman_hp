@@ -119,7 +119,7 @@ echo $this->section('content');
                         ?>
                         <tr>
                             <!-- Tampilkan tanggal peminjaman dengan format dd/mm/yyyy -->
-                            <td><?= date('d/m/Y', strtotime($p['waktu'])) ?></td>
+                        <td><?= ($ts = strtotime($p['waktu'])) && $ts > 0 ? date('d/m/Y', $ts) : date('d/m/Y') ?></td>
                             <!-- Tampilkan nama peminjam dengan escape untuk keamanan -->
                             <td><?= esc($p['nama_user']) ?></td>
                             <!-- Tampilkan merk dan tipe alat dengan escape untuk keamanan -->

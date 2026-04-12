@@ -47,9 +47,6 @@
         <div class="header-actions">
             <h2>📋 Log Aktivitas Sistem</h2>
             <div>
-                <a href="<?= base_url('/admin/log/stats') ?>" class="btn btn-primary">📊 Statistik</a>
-                <a href="<?= base_url('/admin/log/export?format=csv') ?>" class="btn btn-success">📥 Export CSV</a>
-                <a href="<?= base_url('/admin/log/clear') ?>" class="btn btn-danger">🗑️ Bersihkan Log</a>
                 <a href="<?= base_url('/admin') ?>" class="btn btn-secondary">← Kembali</a>
             </div>
         </div>
@@ -117,7 +114,7 @@
                         <th>User</th>
                         <th>Role</th>
                         <th>Aktivitas</th>
-                        <th>IP Address</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -135,7 +132,11 @@
                             </span>
                         </td>
                         <td><?= esc($log['aktivitas']) ?></td>
-                        <td><?= esc($log['ip_address'] ?? '-') ?></td>
+                        <td>
+                            <a href="<?= base_url('/admin/log/detail/' . $log['id_log']) ?>" class="btn btn-primary" style="padding:4px 10px; font-size:13px;">
+                                <i class="fas fa-eye"></i> Detail
+                            </a>
+                        </td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -77,6 +77,13 @@
                             <span>Kelola Alat</span>
                         </a>
                     </li>
+                    <!-- Menu kelola kategori -->
+                    <li>
+                        <a href="<?= base_url('/admin/category') ?>" class="<?= strpos($currentUrl, 'category') !== false ? 'active' : '' ?>">
+                            <i class="fas fa-tags"></i>
+                            <span>Kelola Kategori</span>
+                        </a>
+                    </li>
                     <!-- Menu peminjaman -->
                     <li>
                         <a href="<?= base_url('/admin/peminjaman') ?>" class="<?= strpos($currentUrl, 'peminjaman') !== false ? 'active' : '' ?>">

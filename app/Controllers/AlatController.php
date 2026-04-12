@@ -55,7 +55,8 @@ class AlatController extends BaseController
                 $builder = $alatModel->db->table('alat')
                     ->select('alat.*, category.nama_category') // Pilih semua kolom alat + nama kategori
                     ->join('category', 'category.id_category = alat.id_category', 'left') // LEFT JOIN dengan tabel category
-                    ->where('alat.status', 'Tersedia'); // Filter hanya HP yang tersedia
+                    ->where('alat.status', 'Tersedia') // Filter hanya HP yang tersedia
+                    ->where('alat.kondisi !=', 'Rusak Berat'); // Filter kondisi tidak rusak berat
                 
                 // Jika ada keyword pencarian, tambahkan filter LIKE
                 if ($keyword) {

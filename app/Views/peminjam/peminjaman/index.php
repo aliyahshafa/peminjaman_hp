@@ -2,12 +2,9 @@
 
 <?= $this->section('content') ?>
 
-<?php if (session()->getFlashdata('success')): ?>
-    <div class="alert alert-success" role="alert" style="border-left: 4px solid #28a745;">
         <i class="fas fa-check-circle"></i>
         <strong>Berhasil!</strong> <?= session()->getFlashdata('success') ?>
-    </div>
-<?php endif; ?>
+    
 
 <?php if (session()->getFlashdata('error')): ?>
     <div class="alert alert-danger" role="alert" style="border-left: 4px solid #dc3545;">
@@ -60,8 +57,19 @@
                                 ->getRowArray();
                             
                             // Hitung durasi dari selisih tanggal
-                            $tanggalPinjam = new DateTime($p['waktu']);
-                            $tanggalKembali = $p['tanggal_kembali'] ? new DateTime($p['tanggal_kembali']) : new DateTime();
+                            $waktuTs = strtotime($p['waktu']);
+                            $tanggalPinjamStr = ($waktuTs && $waktuTs > 0) ? date('Y-m-d', $waktuTs) : date('Y-m-d');
+                            try {
+                                $tanggalPinjam = new DateTime($tanggalPinjamStr);
+                            } catch (Exception $e) {
+                                $tanggalPinjam = new DateTime(date('Y-m-d'));
+                            }
+                            $kembaliTs = $p['tanggal_kembali'] ? strtotime($p['tanggal_kembali']) : false;
+                            try {
+                                $tanggalKembali = ($kembaliTs && $kembaliTs > 0) ? new DateTime(date('Y-m-d', $kembaliTs)) : new DateTime(date('Y-m-d'));
+                            } catch (Exception $e) {
+                                $tanggalKembali = new DateTime(date('Y-m-d'));
+                            }
                             $durasi = $tanggalPinjam->diff($tanggalKembali)->days;
                             $durasi = max(1, $durasi);
                             
@@ -74,7 +82,7 @@
                         ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= date('d/m/Y', strtotime($p['waktu'])) ?></td>
+                            <td><?= ($waktuTs && $waktuTs > 0) ? date('d/m/Y', $waktuTs) : date('d/m/Y') ?></td>
                             <td><?= esc($p['merk']) ?> <?= esc($p['tipe']) ?></td>
                             <td><strong><?= $durasi ?> hari</strong></td>
                             <td><strong class="text-success">Rp <?= number_format($p['harga'] ?? 0, 0, ',', '.') ?></strong></td>
@@ -176,8 +184,16 @@
         <?php foreach ($riwayatPembayaran as $index => $payment): ?>
             <?php 
             // Hitung biaya sewa dari harga dan durasi (dari tanggal)
-            $tanggalPinjam = new DateTime($payment['waktu_pinjam']);
-            $tanggalKembali = isset($payment['tanggal_kembali']) ? new DateTime($payment['tanggal_kembali']) : new DateTime();
+            try {
+                $tanggalPinjam = new DateTime(date('Y-m-d', strtotime($payment['waktu_pinjam'])));
+            } catch (Exception $e) {
+                $tanggalPinjam = new DateTime(date('Y-m-d'));
+            }
+            try {
+                $tanggalKembali = isset($payment['tanggal_kembali']) ? new DateTime(date('Y-m-d', strtotime($payment['tanggal_kembali']))) : new DateTime(date('Y-m-d'));
+            } catch (Exception $e) {
+                $tanggalKembali = new DateTime(date('Y-m-d'));
+            }
             $durasi = $tanggalPinjam->diff($tanggalKembali)->days;
             $durasi = max(1, $durasi);
             

@@ -83,12 +83,6 @@
                             </td>
                             <td>
                                 <div class="d-flex gap-1">
-                                    <button type="button" class="btn btn-success btn-sm" onclick="confirmRestore(<?= $item['id_trash'] ?>, '<?= $item['table_name'] ?>')" title="Pulihkan">
-                                        <i class="fas fa-undo"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-danger btn-sm" onclick="confirmPermanentDelete(<?= $item['id_trash'] ?>, '<?= $item['table_name'] ?>')" title="Hapus Permanen">
-                                        <i class="fas fa-times"></i>
-                                    </button>
                                     <button type="button" class="btn btn-info btn-sm" onclick="showDetails(<?= $item['id_trash'] ?>)" title="Lihat Detail">
                                         <i class="fas fa-eye"></i>
                                     </button>
@@ -114,21 +108,15 @@
 </div>
 
 <!-- Modal Detail -->
-<div class="modal fade" id="detailModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Detail Data Terhapus</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <pre id="detailContent"></pre>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-            </div>
+<div id="detailModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:8px; padding:24px; width:100%; max-width:600px; margin:auto; position:relative; top:50%; transform:translateY(-50%); max-height:80vh; overflow-y:auto;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+            <h4 style="margin:0;">Detail Data Terhapus</h4>
+            <button type="button" onclick="document.getElementById('detailModal').style.display='none'" style="background:none; border:none; font-size:20px; cursor:pointer;">&times;</button>
+        </div>
+        <div id="detailContent" style="font-size:13px;"></div>
+        <div style="text-align:right; margin-top:16px;">
+            <button type="button" onclick="document.getElementById('detailModal').style.display='none'" class="btn btn-secondary">Tutup</button>
         </div>
     </div>
 </div>
@@ -156,14 +144,52 @@ function confirmClearTrash() {
 }
 
 function showDetails(id) {
-    // Ambil data dari PHP dan tampilkan di modal
     <?php if (isset($trash)): ?>
     const trashData = <?= json_encode($trash) ?>;
     const item = trashData.find(t => t.id_trash == id);
     
     if (item) {
-        document.getElementById('detailContent').textContent = JSON.stringify(item.data_decoded, null, 2);
-        $('#detailModal').modal('show');
+        // Coba ambil data_decoded, fallback ke parse data_backup langsung
+        let data = item.data_decoded;
+        if (!data && item.data_backup) {
+            try { data = JSON.parse(item.data_backup); } catch(e) { data = null; }
+        }
+
+        let html = '<table style="width:100%; border-collapse:collapse; font-size:14px;">';
+
+        // Info trash dulu
+        const infoRows = [
+            ['Tabel', item.table_name],
+            ['Dihapus Oleh', 'Admin ID: ' + item.deleted_by],
+            ['Waktu Hapus', item.deleted_at],
+            ['Alasan', item.reason || '-'],
+        ];
+        infoRows.forEach(([k, v]) => {
+            html += `<tr style="border-bottom:1px solid #eee; background:#e8f4fd;">
+                <td style="padding:8px 12px; font-weight:bold; color:#0c5460; width:40%;">${k}</td>
+                <td style="padding:8px 12px; color:#0c5460;">${v || '-'}</td>
+            </tr>`;
+        });
+
+        // Separator
+        html += `<tr><td colspan="2" style="padding:6px 12px; background:#f0f0f0; font-weight:bold; font-size:12px; color:#666;">DATA BACKUP</td></tr>`;
+
+        // Isi data backup
+        if (data && typeof data === 'object') {
+            for (const key in data) {
+                const val = (data[key] !== null && data[key] !== '') ? data[key] : '<span style="color:#999">-</span>';
+                html += `<tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:8px 12px; font-weight:bold; color:#555; width:40%; background:#f8f9fa;">${key}</td>
+                    <td style="padding:8px 12px;">${val}</td>
+                </tr>`;
+            }
+        } else {
+            html += `<tr><td colspan="2" style="padding:12px; color:#999; text-align:center;">Data tidak tersedia</td></tr>`;
+        }
+
+        html += '</table>';
+        document.getElementById('detailContent').innerHTML = html;
+        document.getElementById('detailModal').style.display = 'flex';
     }
     <?php endif; ?>
 }

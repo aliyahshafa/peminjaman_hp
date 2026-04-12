@@ -33,28 +33,24 @@
                         </tr>
                         <tr>
                             <td><strong>Tanggal Pinjam:</strong></td>
-                            <td><?= date('d/m/Y', strtotime($peminjaman['waktu'])) ?></td>
+                            <td><?= ($ts = strtotime($peminjaman['waktu'])) && $ts > 0 ? date('d/m/Y', $ts) : date('d/m/Y') ?></td>
                         </tr>
                         <tr>
                             <td><strong>Tanggal Kembali:</strong></td>
-                            <td><?= date('d/m/Y') ?></td>
+                            <td><?= $peminjaman['tanggal_kembali'] ? date('d/m/Y', strtotime($peminjaman['tanggal_kembali'])) : date('d/m/Y') ?></td>
                         </tr>
                         <?php
-                        // Hitung durasi dari selisih tanggal
-                        $tanggalPinjam = new DateTime($peminjaman['waktu']);
-                        $tanggalKembali = new DateTime();
+                        // Hitung durasi dari tanggal_kembali yang tersimpan saat peminjaman diajukan
+                        $tsP = strtotime($peminjaman['waktu']);
+                        $tanggalPinjam = new DateTime(($tsP && $tsP > 0) ? date('Y-m-d', $tsP) : date('Y-m-d'));
+                        $kembaliStr = $peminjaman['tanggal_kembali'] ? date('Y-m-d', strtotime($peminjaman['tanggal_kembali'])) : date('Y-m-d');
+                        $tanggalKembali = new DateTime($kembaliStr);
                         $durasi = $tanggalPinjam->diff($tanggalKembali)->days;
-                        $durasi = max(1, $durasi); // Minimal 1 hari
-                        
-                        // Batasi maksimal 3 hari
+                        $durasi = max(1, $durasi);
                         if ($durasi > 3) {
                             $durasi = 3;
                         }
                         ?>
-                        <tr>
-                            <td><strong>Durasi Peminjaman:</strong></td>
-                            <td><strong style="font-size: 1.2em; color: #0c5460;"><?= $durasi ?> hari</strong> <span class="text-muted">(dihitung otomatis)</span></td>
-                        </tr>
                     </table>
                 </div>
             </div>

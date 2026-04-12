@@ -82,6 +82,16 @@ class AdminController extends BaseController
             ->orderBy('peminjaman.created_at', 'DESC') // Urutkan dari terbaru
             ->limit(5) // Batasi 5 data
             ->findAll(); // Ambil semua data
+
+        // Ambil history peminjaman yang sudah selesai (Dikembalikan) atau ditolak
+        $data['historyPeminjaman'] = $peminjamanModel->db->table('peminjaman')
+            ->select('peminjaman.*, alat.merk, alat.tipe')
+            ->join('alat', 'alat.id_hp = peminjaman.id_hp', 'left')
+            ->whereIn('peminjaman.status', ['Dikembalikan', 'Ditolak'])
+            ->where('peminjaman.deleted_at IS NULL')
+            ->orderBy('peminjaman.id_peminjaman', 'DESC')
+            ->get()
+            ->getResultArray();
         
         // Catat aktivitas view dashboard ke log sistem
         logView('dashboard admin');

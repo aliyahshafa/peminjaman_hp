@@ -71,11 +71,89 @@ class PeminjamanController extends BaseController
             return redirect()->to('/login');
         }
 
-        // Ambil semua data peminjaman dengan JOIN ke tabel alat (merk dan tipe HP)
-        $data['peminjaman'] = $this->peminjamanModel->getPeminjamanWithHp();
+        // Ambil filter dari query string
+        $status  = $this->request->getGet('status');
+        $keyword = $this->request->getGet('keyword');
+
+        // Query peminjaman aktif saja (Diajukan, Disetujui, Dipinjam, Menunggu Pengembalian)
+        $db = \Config\Database::connect();
+        $builder = $db->table('peminjaman')
+            ->select('peminjaman.*, alat.merk, alat.tipe, alat.harga')
+            ->join('alat', 'alat.id_hp = peminjaman.id_hp', 'left')
+            ->whereIn('peminjaman.status', ['Diajukan', 'Disetujui', 'Dipinjam', 'Menunggu Pengembalian'])
+            ->where('peminjaman.deleted_at IS NULL')
+            ->orderBy('peminjaman.id_peminjaman', 'DESC');
+
+        if ($status) {
+            $builder->where('peminjaman.status', $status);
+        }
+        if ($keyword) {
+            $builder->like('peminjaman.nama_user', $keyword);
+        }
+
+        $data['peminjaman'] = $builder->get()->getResultArray();
+        $data['status']     = $status;
+        $data['keyword']    = $keyword;
+
+        // Ambil daftar HP tersedia untuk form pinjam admin
+        $data['alatTersedia'] = $db->table('alat')
+            ->select('id_hp, merk, tipe, harga')
+            ->where('status', 'Tersedia')
+            ->where('deleted_at IS NULL')
+            ->get()->getResultArray();
+
+        // Ambil history peminjaman (Dikembalikan & Ditolak)
+        $data['historyPeminjaman'] = $db->table('peminjaman')
+            ->select('peminjaman.*, alat.merk, alat.tipe, alat.harga')
+            ->join('alat', 'alat.id_hp = peminjaman.id_hp', 'left')
+            ->whereIn('peminjaman.status', ['Dikembalikan', 'Ditolak'])
+            ->where('peminjaman.deleted_at IS NULL')
+            ->orderBy('peminjaman.id_peminjaman', 'DESC')
+            ->get()->getResultArray();
 
         // Render view daftar peminjaman untuk admin
         return view('admin/peminjaman/index', $data);
+    }
+
+    /**
+     * Method untuk admin meminjam HP langsung
+     * Hanya bisa diakses oleh Admin
+     */
+    public function adminPinjam()
+    {
+        // Validasi: Cek apakah user adalah Admin
+        if (session()->get('role') !== 'Admin') {
+            return redirect()->to('/login');
+        }
+
+        $id_hp     = $this->request->getPost('id_hp');
+        $nama_user = $this->request->getPost('nama_user');
+        $catatan   = $this->request->getPost('catatan') ?? '-';
+
+        // Validasi HP tersedia
+        $alat = $this->alatModel->find($id_hp);
+        if (!$alat || strtolower($alat['status']) !== 'tersedia') {
+            return redirect()->back()->with('error', 'HP tidak tersedia untuk dipinjam');
+        }
+
+        $db = \Config\Database::connect();
+        $db->table('peminjaman')->insert([
+            'id_user'         => session()->get('id_user'),
+            'id_hp'           => $id_hp,
+            'nama_user'       => $nama_user,
+            'waktu'           => date('Y-m-d H:i:s'),
+            'status'          => 'Disetujui',
+            'tanggal_kembali' => null,
+            'kondisi_hp'      => 'baik',
+            'denda'           => 0,
+            'catatan'         => $catatan,
+        ]);
+
+        $this->alatModel->update($id_hp, ['status' => 'dipinjam']);
+
+        logAktivitas('Admin meminjamkan HP ' . $alat['merk'] . ' ' . $alat['tipe'] . ' kepada ' . $nama_user);
+
+        return redirect()->to('/admin/peminjaman')->with('success', 'Peminjaman berhasil dibuat');
     }
 
     /**
@@ -129,7 +207,7 @@ class PeminjamanController extends BaseController
             'nama_user' => session()->get('nama_user'), // Nama user dari session
             'waktu'     => date('Y-m-d H:i:s'), // Waktu peminjaman (sekarang)
             'status'    => 'diajukan', // Status awal: diajukan
-            'tanggal_kembali' => null, // Tanggal kembali masih kosong
+            'tanggal_kembali' => $this->request->getPost('tanggal_kembali') ?: null, // Tanggal kembali dari form
             'kondisi_hp'=> 'baik', // Kondisi HP awal: baik
             'denda'     => 0, // Denda awal: 0
             'catatan'   => $this->request->getPost('catatan') ?? '-', // Catatan dari form, jika kosong set '-'
